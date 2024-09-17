@@ -1,0 +1,54 @@
+.mobileMenuWrapper {
+  position: relative;
+}
+
+.hamburgerContainer {
+  position: absolute;
+  top: 16px;
+  left: 5px;
+  z-index: 1001;
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 213, 127);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullScreenMenu.slideOut {
+  transform: translateX(-100%);
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navMenu li {
+  margin: 1rem 0;
+}
+
+.navMenu a {
+  color: #4E3A1F;
+  font-size: 40px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navMenu a:hover {
+  color: #FF8C00;
+}
