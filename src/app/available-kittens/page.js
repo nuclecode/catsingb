@@ -1,4 +1,5 @@
 export default function AvailableKittens() {
+
     return (
         <div>
             <h1>Available Kittens</h1>

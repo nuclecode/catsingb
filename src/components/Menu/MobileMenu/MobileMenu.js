@@ -8,11 +8,12 @@ import Link from 'next/link';
 
 const routes = [
     { path: '/', name: 'Home' },
-    { path: '/about', name: 'About' },
     { path: '/available-kittens', name: 'Available Kittens' },
+    { path: '/our-cats', name: 'Our Cats' },
     { path: '/stud-service', name: 'Stud Service' },
+    { path: '/best-practices', name: 'Best Practices' },
+    { path: '/about', name: 'About' },
     { path: '/contact', name: 'Contact' },
-    { path: '/best-practices', name: 'Best Practices' }
 ];
 
 const MobileMenu = () => {
