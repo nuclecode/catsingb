@@ -1,5 +1,6 @@
 import styles from './HeroLanding.module.scss';
 import { MdStar } from "react-icons/md";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -12,6 +13,7 @@ const HeroSection = () => {
                 <img src="/sphynx_image-hero-landing.png" alt="sphynx cat on the hero section of the landing page"
                      className={styles.heroImage}/>
             </div>
+            <Link href="/reviews" passHref>
             <div className={styles.review}>
                 <div className={styles.rating}>
                     <span className={styles.reviewNumber}>5</span>
@@ -20,6 +22,7 @@ const HeroSection = () => {
                 </div>
                 <span className={styles.reviewText}>Reviews</span>
             </div>
+            </Link>
         </section>
     );
 };
