@@ -1,16 +1,20 @@
+import ProductList from '../../components/ProductList';
+
 export default function AvailableKittens() {
+    const products = [
+        { id: 'sakura', name: 'Sakura', image: '/sakura.jpg' },
+        // { id: 'product2', name: 'Product 2', image: '/product2.jpg' },
+        // { id: 'product3', name: 'Product 3', image: '/product3.jpg' },
+    ];
 
     return (
         <div>
             <h1>Available Kittens</h1>
             <p>
-                Currently, we have several adorable kittens looking for their forever homes. Each kitten is raised with love and care, and comes with a health guarantee. Here are some of our available kittens:
+                Currently, we are expecting a litter of kittens from Akebi. Each kitten is raised with love and care.
             </p>
-            <ul>
-                <li><strong>Kitten 1:</strong> Description of Kitten 1 - Age, Color, and Personality.</li>
-                <li><strong>Kitten 2:</strong> Description of Kitten 2 - Age, Color, and Personality.</li>
-                <li><strong>Kitten 3:</strong> Description of Kitten 3 - Age, Color, and Personality.</li>
-            </ul>
+            <p>An older female is available for adoption.</p>
+            <ProductList products={products} />
             <p>
                 For more details or to schedule a visit, please contact us.
             </p>

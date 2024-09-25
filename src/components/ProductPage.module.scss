@@ -1,0 +1,72 @@
+// styles/ProductPage.module.scss
+
+.productPage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.imageWrapper {
+  flex: 1; // Image takes up half the space
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    max-width: 100%; // Image goes full width on small screens
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; // Ensures image fits properly
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ff5722; // Accent color for the price
+}
+
+.description {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.addToCart {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e64a19;
+  }
+}
