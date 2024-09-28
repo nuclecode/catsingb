@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import styles from './ProductCard.module.scss';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, baseRoute }) => {
     return (
-        <Link href={`/products/${product.id}`}>
+        <Link href={`${baseRoute}/${product.id}`}>
             <div className={styles.card}>
                 <img src={product.image} alt={product.name} className={styles.image} />
                 <div className={styles.info}>

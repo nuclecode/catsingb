@@ -10,7 +10,7 @@ const ProductPage = ({ product }) => {
                 <h1 className={styles.title}>{product.title}</h1>
                 <p className={styles.price}>${product.price}</p>
                 <p className={styles.description}>{product.description}</p>
-                <button className={styles.addToCart}>Add to Cart</button>
+                <button className={styles.addToCart}>Enquire about this cat</button>
             </div>
         </div>
     );
