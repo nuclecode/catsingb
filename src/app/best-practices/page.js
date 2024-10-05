@@ -2,7 +2,7 @@ import styles from './bestpractices.module.scss';
 
 export default function AvailableKittens() {
     return (
-        <div>
+        <div className={styles.container}>
             <h1>Best Practices</h1>
             <p>Over the years, we have acquired good habits of caring the proper way after our Elf cats, so here are the best practices from real-life experience.</p>
             <p>
