@@ -28,11 +28,11 @@ export default function RootLayout({ children }) {
         const trackPageView = () => {
             if(mixpanel) {
                 mixpanel.track("Page Visit", {
-                    page: pathname,
-                    title: document.title,
+                    page: pathname || 'unknown',
+                    title: document.title || 'unknown',
                 });
             } else {
-                console.error("Mixpanel not init")
+                console.error("Mixpanel not initialized")
             }
         };
 
@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
 
         const handleRouteChange = (url) => {
             mixpanel.track("Page Visit", {
-                page: url,
-                title: document.title,
+                page: url || 'unknown',
+                title: document.title || 'unknown',
             });
         };
 
