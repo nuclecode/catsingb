@@ -7,8 +7,6 @@ import mixpanel from 'mixpanel-browser';
 import { metadata } from './metadata';
 import Router from "next/router";
 import { usePathname } from "next/navigation";
-import Head from "next/head";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -55,15 +53,15 @@ export default function RootLayout({ children }) {
     }, [pathname])
   return (
 
-    <>
-      <Head>
+    <html lang="en">
+      <head>
           <title>{metadata.title}</title>
-          <meta name="description" content={metadata.description} />
-      </Head>
+          <meta name="description" content={metadata.description}/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <Header />
       {children}
       </body>
-    </>
+    </html>
   );
 }
