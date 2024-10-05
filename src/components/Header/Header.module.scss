@@ -1,0 +1,84 @@
+// styles/navbar.scss
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .desktop-menu {
+    display: flex;
+
+    a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    .mobile-menu-content {
+      display: flex;
+      flex-direction: column;
+      background-color: #444;
+      padding: 1rem;
+
+      a {
+        margin: 0.5rem 0;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for Desktop Menu
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+//.header {
+//  position: fixed;
+//  top: 0;
+//  width: 100%;   // Ensure the header takes up the full width of the viewport
+//  max-width: 100vw;  // Prevent the header from extending past the viewport
+//  z-index: 1000;  // Make sure the header stays above other content
+//  background-color: white;  // Adjust as needed
+//  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+//  overflow-x: hidden;  // Prevent horizontal overflow (important for mobile)
+//  padding: 0 16px;  // Optional padding to give some space around the content
+//}
+//
+//@media (min-width: 769px) {
+//  .header {
+//    height: 90px;  // Example height for desktop
+//  }
+//}
+//
+//@media (max-width: 768px) {
+//  .header {
+//    height: 60px;  // Example height for mobile
+//  }
+//}
