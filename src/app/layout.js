@@ -1,11 +1,10 @@
 'use client'
-import { useEffect } from 'react';
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header/Header";
+
+import MobileMenu from "@/components/Menu/MobileMenu/MobileMenu";
 import { metadata } from './metadata';
-import Router from "next/router";
-import { usePathname } from "next/navigation";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,7 +28,7 @@ export default function RootLayout({ children }) {
           <meta name="description" content={metadata.description}/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <Header />
+      <MobileMenu />
       {children}
       </body>
     </html>
