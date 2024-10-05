@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import mixpanel from 'mixpanel-browser';
 import { metadata } from './metadata';
 import Router from "next/router";
 import { usePathname } from "next/navigation";
@@ -20,37 +19,8 @@ const geistMono = localFont({
 });
 
 export default function RootLayout({ children }) {
-    const pathname = usePathname();
 
-    useEffect(() => {
-        mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_TOKEN);
 
-        const trackPageView = () => {
-            if(mixpanel) {
-                mixpanel.track("Page Visit", {
-                    page: pathname || 'unknown',
-                    title: document.title || 'unknown',
-                });
-            } else {
-                console.error("Mixpanel not initialized")
-            }
-        };
-
-        trackPageView();
-
-        const handleRouteChange = (url) => {
-            mixpanel.track("Page Visit", {
-                page: url || 'unknown',
-                title: document.title || 'unknown',
-            });
-        };
-
-        Router.events.on("routeChangeComplete", handleRouteChange);
-
-        return () => {
-            Router.events.off("routeChangeComplete", handleRouteChange);
-        };
-    }, [pathname])
   return (
 
     <html lang="en">
